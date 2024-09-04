@@ -1,0 +1,105 @@
+EEG F3-A2
+-no notable patterns
+
+EEG F4-A1
+-no notable patterns
+
+EEG A1-A2 has higher amplitude signals for severe and moderate
+- severe has equal + and - oscillations (5 to -5)
+- moderate has higher on + side than - side (5 to -2.5)
+- for normal and mild it is near 0
+
+EEG C3-A2
+-amp for moderate is min for some reason
+
+EEG C4-A1
+-amp for moderate is min for some reason
+
+EEG O1-A2
+-no notable patterns
+
+EEG O2-A1
+-same data as O1-A2
+
+EMG CHIN
+
+EOG LOC 2
+-no notable patterns
+
+EOG ROC 2 
+-no notable patterns
+
+LEG 1
+-almost uniform for all except for a spike in severe
+
+LEG 2
+-broad spike in severe, but weird patterns
+
+ECG I 
+-mild and normal have high amps, followed by severe then moderate
+
+ECG II
+-normal has highest amp
+
+ECG IIHF
+-normal has highest amp
+
+RR
+-almost equal amps for all
+-small differences, normal has lowest mean rr, severe has highest
+
+SNORE
+-v high amps suddenly for severe, considerable amp throughout
+-negligible amp for normal, no snoring
+-moderate has a small amplitude of snoring throughout
+-mild mein its mostly no snoring but there are short bursts of snoring
+
+FLOW PATIENT 1
+-no notable patterns
+
+FLOW PATIENT 2
+-no notable patterns
+
+FLOW PATIENT 3
+-no notable patterns
+
+EFFORT THO
+-highest amp for severe
+-stabilises at higher time hours
+
+EFFORT ABD
+-highest amp for moderate 
+
+SPO2
+-mean spo2 quite low for severe
+-severe has lot of fluctuations
+-mild slight fluctuations
+-moderate bit more 
+-normal close to nil fluctuations
+
+PLETH
+-severe>moderate~mild>normal
+
+XPAP CPAP/IPAP/EPAP
+-max fluctuation in severe then moderate then mild, normal ka 0 line pe hai
+-fluctuations start after a few hrs
+
+LEAK TOTAL
+-starts after a few hrs
+- sev>mod>mild>normal (mean vals)
+
+PULSE RATE
+-near constant for normal
+-decreases for others
+- avg in order normal>mild>moderate>severe
+
+PRESS CHECK/TECHNICAL/BODY
+all zeros
+
+find variance and var/mean over time points 
+
+
+
+censorised means, downsampling
+
+heatmap of timepoint important channels
