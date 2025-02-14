@@ -1,2 +1,6 @@
 .vscode/
 .env/
+moderate_csvs/
+mild_csvs/
+mild_csvs.zip
+moderate_csvs.zip
