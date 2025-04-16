@@ -1,0 +1,163 @@
+Top 20 Features (Sorted by Importance):
+D2_range: 0.1642
+A5_percentile_25: 0.1255
+D4_percentile_75: 0.1236
+D3_energy: 0.1214
+D1_range: 0.1158
+D1_energy: 0.1097
+D1_hjorth_activity: 0.1090
+D1_std: 0.1084
+D3_hjorth_activity: 0.1018
+D2_std: 0.0978
+D2_hjorth_activity: 0.0972
+D3_percentile_75: 0.0970
+D2_energy: 0.0967
+D3_percentile_25: 0.0942
+D4_percentile_25: 0.0874
+D1_ar_coeff_4: 0.0815
+D4_hjorth_activity: 0.0806
+D4_std: 0.0804
+D4_energy: 0.0797
+D5_percentile_75: 0.0785
+penta 79
+
+
+Top 20 Features (Sorted by Importance):
+D4_ar_coeff_3: 0.1490
+D2_hjorth_complexity: 0.1223
+D1_hjorth_complexity: 0.1040
+D2_energy: 0.1039
+D2_hjorth_activity: 0.1028
+D2_std: 0.1015
+A5_ar_coeff_3: 0.1006
+D2_percentage_energy: 0.0977
+D1_ar_coeff_3: 0.0945
+D2_ar_coeff_3: 0.0938
+D5_percentile_50: 0.0934
+A5_renyi_entropy: 0.0928
+D3_hjorth_mobility: 0.0925
+A5_tsallis_entropy: 0.0921
+D1_percentile_75: 0.0908
+D1_percentage_energy: 0.0857
+D4_hjorth_complexity: 0.0843
+D1_ar_coeff_4: 0.0820
+D1_hjorth_mobility: 0.0818
+A5_percentile_75: 0.0796
+penta 62
+
+Top 20 Features (Sorted by Importance):
+A5_percentile_75: 0.2639
+A5_percentile_25: 0.2337
+D5_percentile_75: 0.2334
+D4_percentile_75: 0.2294
+D5_percentile_25: 0.2277
+D2_percentage_energy: 0.1932
+D1_percentage_energy: 0.1846
+D3_percentile_25: 0.1790
+D2_ar_coeff_3: 0.1789
+D3_ar_coeff_4: 0.1704
+D4_percentile_25: 0.1683
+D1_std: 0.1665
+D1_hjorth_activity: 0.1659
+D1_energy: 0.1648
+D1_ar_coeff_3: 0.1486
+D3_percentile_75: 0.1397
+D1_ar_coeff_2: 0.1329
+D1_hjorth_mobility: 0.1245
+D2_hjorth_mobility: 0.1189
+D1_percentile_50: 0.1114
+penta 61
+
+
+Top 20 Features (Sorted by Importance):
+D2_hjorth_mobility: 0.1231
+D2_ar_coeff_2: 0.1058
+D1_energy: 0.1042
+D1_hjorth_activity: 0.1037
+D1_std: 0.1031
+D2_energy: 0.1002
+D1_hjorth_mobility: 0.0984
+D2_std: 0.0974
+D2_hjorth_activity: 0.0972
+D3_hjorth_mobility: 0.0950
+D1_range: 0.0910
+D2_hjorth_complexity: 0.0897
+D2_range: 0.0889
+D1_percentage_energy: 0.0886
+D2_ar_coeff_3: 0.0883
+D3_percentile_25: 0.0855
+D1_hjorth_complexity: 0.0850
+D1_ar_coeff_4: 0.0843
+D2_percentage_energy: 0.0769
+D3_energy: 0.0751
+penta 66
+
+Top 20 Features (Sorted by Importance):
+D1_percentile_75: 0.2270
+D5_percentile_25: 0.1959
+D2_hjorth_complexity: 0.1851
+D3_percentage_energy: 0.1801
+D2_percentile_75: 0.1777
+D5_percentage_energy: 0.1625
+slow_wave_index: 0.1522
+D2_percentile_25: 0.1513
+D4_ar_coeff_2: 0.1454
+D1_percentile_25: 0.1453
+D1_percentage_energy: 0.1436
+D2_energy: 0.1369
+D1_std: 0.1349
+D2_hjorth_activity: 0.1343
+D1_hjorth_activity: 0.1342
+D2_std: 0.1339
+A5_percentile_75: 0.1337
+D1_energy: 0.1334
+D2_ar_coeff_2: 0.1281
+D3_std: 0.1247
+penta 58
+SEVERE
+
+Top 20 Features (Sorted by Importance):
+D5_percentile_25: 0.4348
+A5_percentile_25: 0.4250
+D5_percentile_75: 0.4194
+A5_percentile_75: 0.4042
+D4_percentile_75: 0.3615
+D4_percentile_25: 0.3544
+D5_percentage_energy: 0.3376
+D4_percentage_energy: 0.3196
+D3_energy: 0.3099
+D2_std: 0.3083
+D2_hjorth_activity: 0.3081
+D2_energy: 0.3066
+slow_wave_index: 0.3022
+D1_percentile_25: 0.3011
+D3_hjorth_activity: 0.3001
+D3_std: 0.3001
+D1_percentile_75: 0.2964
+D4_ar_coeff_2: 0.2877
+D4_hjorth_activity: 0.2864
+D5_energy: 0.2861
+MODERATE penta 54
+
+Top 20 Features (Sorted by Importance):
+D2_energy: 0.4345
+D2_std: 0.4339
+D2_hjorth_activity: 0.4336
+D2_percentile_25: 0.3317
+D2_percentile_75: 0.3186
+D2_range: 0.3081
+D5_percentile_75: 0.2996
+D1_percentile_75: 0.2986
+D3_std: 0.2948
+D3_hjorth_activity: 0.2946
+D3_energy: 0.2933
+D1_percentile_25: 0.2923
+D1_energy: 0.2886
+D1_hjorth_activity: 0.2877
+D1_std: 0.2873
+D5_percentile_25: 0.2611
+D1_range: 0.2513
+D2_ar_coeff_2: 0.2287
+D4_percentile_25: 0.2260
+D2_hjorth_complexity: 0.2157
+MILD penta 51

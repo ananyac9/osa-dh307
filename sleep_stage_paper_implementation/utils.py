@@ -186,6 +186,7 @@ def extract_features(segmented_signals, fs):
         features_list.append(features)
 
     print("Ensuring consistent feature dimensions...")
+
     all_keys = set().union(*(features.keys() for features in features_list)) 
     for features in features_list:
         for key in all_keys:
@@ -217,20 +218,58 @@ def normalize_features(features_list):
     
     return normalized_features_list
 
-def filter_features(features, labels, threshold=0.01):
+def filter_features(features, labels, feature_names, threshold=0.01):
+    """
+    Filters features based on mutual information scores and prints the top 20 features.
+
+    Parameters:
+        features (ndarray): Feature matrix.
+        labels (ndarray): Target labels.
+        feature_names (list): List of feature names corresponding to the columns of the feature matrix.
+        threshold (float): Threshold for mutual information score to select features.
+
+    Returns:
+        filtered_features (ndarray): Filtered feature matrix.
+        selected_indices (ndarray): Indices of selected features.
+        selected_feature_names (list): Names of selected features.
+    """
     mi_scores = mutual_info_classif(features, labels)
     
-    selected_indices = np.where(mi_scores > threshold)[0]
+    # Combine feature names and scores, then sort by scores in descending order
+    feature_importance = sorted(zip(feature_names, mi_scores), key=lambda x: x[1], reverse=True)
+    
+    print("Top 20 Features (Sorted by Importance):")
+    for name, score in feature_importance[:20]:  # Print only the top 20 features
+        print(f"{name}: {score:.4f}")
+
+    # Select features with scores above the threshold
+    selected_indices = [i for i, (_, score) in enumerate(feature_importance) if score > threshold]
+    selected_feature_names = [feature_importance[i][0] for i in selected_indices]
+    print(f"\nSelected Features (MI > {threshold}): {selected_feature_names[:20]}")  # Print top 20 selected features
+
+    # Filter the features matrix based on selected indices
     filtered_features = features[:, selected_indices]
     
-    return filtered_features, selected_indices
+    return filtered_features, selected_indices, selected_feature_names
 
-def mrmr_selection(features, labels, k=10):
+
+def mrmr_selection(features, labels, feature_names, k=10):
     selector = SelectKBest(score_func=mutual_info_classif, k=k)
-    selected_features = selector.fit_transform(features, labels)
-    selected_indices = selector.get_support(indices=True)
+    selector.fit(features, labels)
     
-    return selected_features, selected_indices
+    mi_scores = selector.scores_
+    print("Mutual Information Scores for All Features:")
+    for name, score in zip(feature_names, mi_scores):
+        print(f"{name}: {score:.4f}")
+    
+    selected_indices = selector.get_support(indices=True)
+    selected_feature_names = [feature_names[i] for i in selected_indices]
+    print(f"\nTop {k} Selected Features: {selected_feature_names}")
+    
+    selected_features = selector.transform(features)
+    
+    return selected_features, selected_indices, selected_feature_names
+
 
 def train_and_evaluate_binary_svm(selected_features, labels):
     X_train, X_test, y_train, y_test = train_test_split(selected_features, labels, test_size=0.2, random_state=42, stratify=labels)
@@ -310,20 +349,22 @@ def main_pipeline(raw_signals, labels, fs, type):
     print("Feature normalization completed.")
     print("Converting features to matrix...")
     feature_matrix = np.array([list(features.values()) for features in normalized_features_list])
+    feature_names = list(features_list[0].keys())
     print(f"Feature matrix shape: {feature_matrix.shape}")
 
     # Step 6: Filter features based on mutual information
     print("Feature conversion completed.")
     print("Filtering features based on mutual information...")
-    filtered_features, _ = filter_features(feature_matrix, labels)
+    filtered_features, _, selected_feature_names = filter_features(feature_matrix, labels, feature_names)
 
     # Step 7: Perform mRMR feature selection
     print("Feature filtering completed.")
     print("Performing mRMR feature selection...")
-    selected_features, _ = mrmr_selection(filtered_features, labels, k=10)
+    selected_features, _, top_feature_names = mrmr_selection(filtered_features, labels, selected_feature_names, k=10)
 
     # Step 8: Train and evaluate the SVM classifier
     print("mRMR feature selection completed.")
+    print(f"Top Selected Features: {top_feature_names}")
     print("Training and evaluating SVM...")
     if type=="binary":
         train_and_evaluate_binary_svm(selected_features, labels)
